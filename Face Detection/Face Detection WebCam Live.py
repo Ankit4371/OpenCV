@@ -1,12 +1,10 @@
 
 from imutils.video import VideoStream
 import numpy as np
-import imutils
-import time
 import cv2
 
-prototxt_path = "deploy.prototxt.txt"
-model_path = "res10_300x300_ssd_iter_140000.caffemodel"
+prototxt_path = ""
+model_path = ""
 dnn_model = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
 
 print("Opening WebCam")
@@ -46,13 +44,11 @@ while True:
 	# show the output frame
 	cv2.imshow("Real Time Output", frame)
 	stopkey = cv2.waitKey(1) & 0xFF
- 
-	# if the `q` key was pressed, break from the loop
 	if stopkey == ord("q"):
 		print("Closing WebCam")
 		break
 
-# do a bit of cleanup
+
 cv2.destroyAllWindows()
 vs.stop()
 print("Program is completed")
