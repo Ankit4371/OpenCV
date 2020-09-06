@@ -2,7 +2,7 @@ import cv2
 ###############################
 framewidth = 640
 frameheight = 480
-numPlatCascade = cv2.CascadeClassifier('trainmodel/haarcascades/haarcascade_russian_plate_number.xml')
+numPlatCascade = cv2.CascadeClassifier('model')
 minArea =500
 color = (255,0,0)
 ###############################
